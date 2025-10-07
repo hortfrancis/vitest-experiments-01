@@ -52,6 +52,27 @@ Run the Vitest test suite:
 npm test
 ```
 
+### Generate coverage report
+
+Generate a test coverage report:
+
+```bash
+npm run coverage
+```
+
+### View coverage report
+View the created coverage report in your web browser:
+
+```bash
+npm run coverage-report
+```
+
+The report will be served at the default Vite port: `localhost:5173`. 
+
+If that port is already in use, Vite will automatically select the next available port (e.g., `5174`, `5175`, etc.).
+
+(The actual port will be displayed by in the terminal after running the command.)
+
 ## Resources
 
 - [Vitest Documentation](https://vitest.dev/)
