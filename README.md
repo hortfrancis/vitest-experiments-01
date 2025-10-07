@@ -7,13 +7,16 @@ This project uses TypeScript; therefore, all test files have the file extensions
 ## Contents
 
 - [**Sanity check**](./tests/sanity-check.test.ts)
-  - A simple test to verify that the testing setup is working correctly.
+  - A simple test to verify that the testing setup is working correctly 
   - Further reading:
     - [Sanity check - Wikipedia](https://en.wikipedia.org/wiki/Sanity_check)
     - [What is a sanity test check? - Stack Overflow](https://stackoverflow.com/questions/4055733/what-is-a-sanity-test-check)
 - Utility function tests:
   - [**`capitalise`**](./tests/capitalise.test.ts)
-    - A simple utility function to capitalise the first letter of a string. 
+    - A simple utility function to capitalise the first letter of a string  
+- Mocking:
+  - [**`mocking`**](./tests/mocking.test.ts)
+    - Basic example of a mock function using `vi.fn()` 
 
 ## Setup
 
