@@ -24,6 +24,9 @@ This project uses TypeScript; therefore, all test files have the file extensions
 - Logging values:
   - [**`logValues`**](./tests/logValues.test.ts)
     - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
+- Logging React components: 
+  - [**`logReactUI`**](./tests/logReactUI.test.tsx)
+    - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
 
 ## Setup
 
