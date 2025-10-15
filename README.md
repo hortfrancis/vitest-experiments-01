@@ -14,6 +14,10 @@ This project uses TypeScript; therefore, all test files have the file extensions
 - Utility function tests:
   - [**`capitalise`**](./tests/capitalise.test.ts)
     - A simple utility function to capitalise the first letter of a string
+- React component tests:
+  - [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
+    - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
+    - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
 - Mocking:
   - [**`mocking`**](./tests/mocking.test.ts)
     - Basic example of a mock function using `vi.fn()`
