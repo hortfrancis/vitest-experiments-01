@@ -7,16 +7,19 @@ This project uses TypeScript; therefore, all test files have the file extensions
 ## Contents
 
 - [**Sanity check**](./tests/sanity-check.test.ts)
-  - A simple test to verify that the testing setup is working correctly 
+  - A simple test to verify that the testing setup is working correctly
   - Further reading:
     - [Sanity check - Wikipedia](https://en.wikipedia.org/wiki/Sanity_check)
     - [What is a sanity test check? - Stack Overflow](https://stackoverflow.com/questions/4055733/what-is-a-sanity-test-check)
 - Utility function tests:
   - [**`capitalise`**](./tests/capitalise.test.ts)
-    - A simple utility function to capitalise the first letter of a string  
+    - A simple utility function to capitalise the first letter of a string
 - Mocking:
   - [**`mocking`**](./tests/mocking.test.ts)
-    - Basic example of a mock function using `vi.fn()` 
+    - Basic example of a mock function using `vi.fn()`
+- Logging values:
+  - [**`logValues`**](./tests/logValues.test.ts)
+    - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
 
 ## Setup
 
@@ -29,7 +32,7 @@ git clone https://github.com/hortfrancis/vitest-experiments-01.git
 cd vitest-experiments-01
 ```
 
-Or, using the [GH CLI](https://cli.github.com/): 
+Or, using the [GH CLI](https://cli.github.com/):
 
 ```bash
 gh repo clone hortfrancis/vitest-experiments-01
@@ -61,13 +64,14 @@ npm run coverage
 ```
 
 ### View coverage report
+
 View the created coverage report in your web browser:
 
 ```bash
 npm run coverage-report
 ```
 
-The report will be served at the default Vite port: `localhost:5173`. 
+The report will be served at the default Vite port: `localhost:5173`.
 
 If that port is already in use, Vite will automatically select the next available port (e.g., `5174`, `5175`, etc.).
 
