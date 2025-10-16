@@ -1,11 +1,17 @@
+interface MySimpleTableProps {
+  data: Array<{
+    id: number;
+    name: string;
+    [key: string]: any; // Allow additional properties
+  }>;
+}
 
-const MySimpleTable = ({ data }: { data: Array<{ id: number; name: string }> }) => {
+const MySimpleTable = ({ data }: MySimpleTableProps) => {
 
   function toSentenceCase(str: string) {
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
   }
   const headerText = data.length > 0 ? Object.keys(data[0]).map((key) => toSentenceCase(key)) : [];
-  console.log('headerText:', headerText);
 
   return (
     <table>
