@@ -27,6 +27,7 @@ This project uses TypeScript; therefore, all test files have the file extensions
 - Logging React components: 
   - [**`logReactUI`**](./tests/logReactUI.test.tsx)
     - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
+    - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).
 
 ## Setup
 
