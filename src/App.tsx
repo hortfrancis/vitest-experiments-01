@@ -1,4 +1,3 @@
-import './App.css';
 import MySimpleComponent from './components/MySimpleComponent';
 import MySimpleTable from './components/MySimpleTable';
 
@@ -16,7 +15,7 @@ function App() {
     <>
       <header>
         <h1>Vitest Experiments 01</h1>
-        <p>GitHub repo:
+        <p>GitHub repo:{' '}
           <a
             href='https://github.com/hortfrancis/vitest-experiments-01'
             target='_blank'
