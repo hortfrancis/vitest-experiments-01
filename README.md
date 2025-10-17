@@ -33,6 +33,10 @@ This project uses TypeScript; therefore, all test files have the file extensions
 - Logging values:
   - [**`logValues`**](./tests/logValues.test.ts)
     - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
+  - [**`getRoles`**](./tests/getRoles.test.tsx)
+    - Example of how to find the [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
+    - Further reading: 
+      - [Accessibility | Testing Library (getRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#getroles)
 - Logging React components: 
   - [**`logReactUI`**](./tests/logReactUI.test.tsx)
     - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
