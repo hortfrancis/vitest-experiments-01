@@ -1,5 +1,6 @@
 import MySimpleComponent from './components/MySimpleComponent';
 import MySimpleTable from './components/MySimpleTable';
+import ButtonCard from './components/ButtonCard';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -36,6 +37,10 @@ function App() {
           <hr />
           <section>
             <MySimpleTable data={tableData} />
+          </section>
+          <hr />
+          <section>
+            <ButtonCard />
           </section>
         </section>
       </main>

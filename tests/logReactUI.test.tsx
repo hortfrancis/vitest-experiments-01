@@ -28,6 +28,7 @@ describe('logging React UI', () => {
     });
 
     // Log all cell values in just the first row
+    // `Array.map()` can also be useful here..
     for (const cell of firstRow.parentElement?.children || []) {
       console.log('Cell text:', cell.textContent);
       // -> Cell text: 1

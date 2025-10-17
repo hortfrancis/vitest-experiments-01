@@ -1,8 +1,17 @@
 # Vitest Experiments 01
 
-This repository includes examples of how to use [**Vitest**](https://vitest.dev/), for unit testing in React projects.
+This repository includes examples of how to use [**Vitest**](https://vitest.dev/), for unit testing in React projects, using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). 
+
+React Testing Library handles rendering and interacting with the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) (using [jsdom](https://github.com/jsdom/jsdom)), while Vitest provides the testing framework and assertion library.
 
 This project uses TypeScript; therefore, all test files have the file extensions `.test.ts` or `.test.tsx`.
+
+## Technical overview
+
+- **Vitest** - Provides the testing framework (`describe`, `test`, `expect`) and default matchers (`.toBe()`, `.toBeNull()`, etc.). Also configures jsdom as the test environment.
+- **jsdom** - Provides the DOM implementation (`document`, `window`, DOM APIs) that creates a browser-like environment in Node.js.
+- **React Testing Library** - Renders React components into the jsdom DOM and provides utilities to query and interact with rendered elements (`render`, `screen`, `getByText`, etc.).
+- **`@testing-library/jest-dom`** (optional) - Adds additional DOM-friendly matchers to `expect()` for more readable assertions (`.toBeInTheDocument()`, `.toHaveTextContent()`, etc.).
 
 ## Contents
 
@@ -89,3 +98,5 @@ If that port is already in use, Vite will automatically select the next availabl
 
 - [Vitest Documentation](https://vitest.dev/)
 - [Vite Documentation](https://vite.dev/)
+
+
