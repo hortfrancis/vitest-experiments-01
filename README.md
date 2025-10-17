@@ -20,27 +20,30 @@ This project uses TypeScript; therefore, all test files have the file extensions
   - Further reading:
     - [Sanity check - Wikipedia](https://en.wikipedia.org/wiki/Sanity_check)
     - [What is a sanity test check? - Stack Overflow](https://stackoverflow.com/questions/4055733/what-is-a-sanity-test-check)
-- Utility function tests:
+- **Testing utility functions**
   - [**`capitalise`**](./tests/capitalise.test.ts)
     - A simple utility function to capitalise the first letter of a string
-- React component tests:
+- **Testing React components**
   - [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
     - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
     - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
-- Mocking:
+- **Mocking**
   - [**`mocking`**](./tests/mocking.test.ts)
     - Basic example of a mock function using `vi.fn()`
-- Logging values:
-  - [**`logValues`**](./tests/logValues.test.ts)
-    - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
-  - [**`logRoles`**](./tests/logRoles.test.tsx)
-    - Example of how to log [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
-    - Further reading:
-      - [Accessibility | Testing Library (logRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#logroles)
-- Logging React components:
-  - [**`logReactUI`**](./tests/logReactUI.test.tsx)
-    - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
-    - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).
+- **Debugging**
+  - *Logging values:*
+    - [**`logValues`**](./tests/logValues.test.ts)
+      - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
+    - [**`logRoles`**](./tests/logRoles.test.tsx)
+      - Example of how to log [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
+      - Further reading:
+        - [Accessibility | Testing Library (logRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#logroles)
+  - *Logging React components:*
+    - [**`logReactUI`**](./tests/logReactUI.test.tsx)
+      - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
+      - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).
+  - Further reading:
+    - [Debugging | Testing Library](https://testing-library.com/docs/dom-testing-library/api-debugging)
 
 ## Setup
 
