@@ -98,5 +98,6 @@ If that port is already in use, Vite will automatically select the next availabl
 
 - [Vitest Documentation](https://vitest.dev/)
 - [Vite Documentation](https://vite.dev/)
-
-
+- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
+- [jsdom Documentation](https://github.com/jsdom/jsdom)
+- [jest-dom Documentation](https://github.com/testing-library/jest-dom)
