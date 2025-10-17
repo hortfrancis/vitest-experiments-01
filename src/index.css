@@ -76,10 +76,10 @@ td {
 }
 
 .button-card {
-  border: 2px solid #ccc;
-  border-radius: 0.5rem;
-  padding: 1rem;
   max-width: 300px;
   min-height: 125px;
-  /* text-align: center; */
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  background: white;
 }

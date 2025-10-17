@@ -3,6 +3,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import ButtonCard from '../src/components/ButtonCard';
 
 describe('asynchronous operations', () => {
+  // (I didn't need to use `findByText` or `waitFor` in this case,
+  // so not really a good example of async testing...)
   test("Text appears after a button is clicked", async () => {
     render(<ButtonCard />);
 
