@@ -27,6 +27,13 @@ This project uses TypeScript; therefore, all test files have the file extensions
   - [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
     - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
     - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
+  - User events 
+    - [**`userEvents`**](./tests/userEvents.test.tsx)
+      - Example of simulating user interactions (clicking a checkbox and a button) using [`@testing-library/user-event`](https://github.com/testing-library/user-event)
+      - Demonstrates how to verify changes in UI state after user interactions
+      - `userEvent` is preferred over `fireEvent` for simulating real user behavior
+        - Further reading:
+          - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
 - **Mocking**
   - [**`mocking`**](./tests/mocking.test.ts)
     - Basic example of a mock function using `vi.fn()`
