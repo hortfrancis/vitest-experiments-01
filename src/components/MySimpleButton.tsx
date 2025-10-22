@@ -1,5 +1,5 @@
 interface MySimpleButtonProps {
-  onClick?: () => void;
+  onClick: () => void;
   children: React.ReactNode;
 }
 
@@ -8,7 +8,7 @@ const MySimpleButton = ({
   children,
 }: MySimpleButtonProps) => {
   return (
-    <button onClick={onClick ? onClick : undefined}>
+    <button onClick={onClick}>
       {children}
     </button>
   );

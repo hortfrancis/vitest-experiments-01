@@ -84,6 +84,12 @@ td {
   background: white;
 }
 
+label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
 label.checkbox-label {
   display: flex;
   cursor: pointer;
@@ -91,6 +97,13 @@ label.checkbox-label {
   gap: 0.5rem;
   font-size: 1.2rem;
   user-select: none;
+}
+
+input[type="text"] {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
 }
 
 input[type="checkbox"] {

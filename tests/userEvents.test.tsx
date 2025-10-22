@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import MySimpleCheckbox from '../src/components/MySimpleCheckbox';
 import MySimpleButton from '../src/components/MySimpleButton';
+import MySimpleInput from '../src/components/MySimpleInput';
 
 describe('user events', () => {
   test("Checkbox is checked when clicked", async () => {
@@ -32,5 +33,32 @@ describe('user events', () => {
 
     // Verify that the click handler was called
     expect(mockHandleClick).toHaveBeenCalledTimes(1);
+  });
+
+  test("User can type into MySimpleInput", async () => {
+    const user = userEvent.setup();
+    render(<MySimpleInput label="Type here..." />);
+
+    const inputElement = screen.getByLabelText('Type here...') as HTMLInputElement;
+
+    // // Initially, the input should be empty
+    expect(inputElement.value).toBe('');
+
+    // // Simulate user typing into the input
+    await user.type(inputElement, 'Hello, World!');
+
+    // // Verify that the input value has been updated
+    expect(inputElement.value).toBe('Hello, World!');
+
+    // Simulate user clearing the input
+    await user.clear(inputElement);
+
+    // Verify that the input is empty again
+    expect(inputElement.value).toBe('');
+
+    // We can also use `user.keyboard`
+    // -- `user.type` uses this 'under-the-hood'
+    await user.keyboard('Vitest is great!');
+    expect(inputElement.value).toBe('Vitest is great!');
   });
 });

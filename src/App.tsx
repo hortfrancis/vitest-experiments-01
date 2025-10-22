@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import MySimpleComponent from './components/MySimpleComponent';
 import MySimpleTable from './components/MySimpleTable';
 import ButtonCard from './components/ButtonCard';
 import MySimpleCheckbox from './components/MySimpleCheckbox';
 import MySimpleButton from './components/MySimpleButton';
+import MySimpleInput from './components/MySimpleInput';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -11,8 +13,7 @@ const tableData = [
 ];
 
 function App() {
-
-
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <>
@@ -53,6 +54,12 @@ function App() {
             <MySimpleButton onClick={() => alert('Button clicked!')}>
               Click Me!
             </MySimpleButton>
+          </section>
+          <hr />
+          <section>
+            <MySimpleInput
+              label="Enter some text:"
+            />
           </section>
         </section>
       </main>
