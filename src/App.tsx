@@ -2,6 +2,7 @@ import MySimpleComponent from './components/MySimpleComponent';
 import MySimpleTable from './components/MySimpleTable';
 import ButtonCard from './components/ButtonCard';
 import MySimpleCheckbox from './components/MySimpleCheckbox';
+import MySimpleButton from './components/MySimpleButton';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -46,6 +47,12 @@ function App() {
           <hr />
           <section>
             <MySimpleCheckbox label="Check me!" />
+          </section>
+          <hr />
+          <section>
+            <MySimpleButton onClick={() => alert('Button clicked!')}>
+              Click Me!
+            </MySimpleButton>
           </section>
         </section>
       </main>
