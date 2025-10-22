@@ -31,14 +31,14 @@ This project uses TypeScript; therefore, all test files have the file extensions
   - [**`mocking`**](./tests/mocking.test.ts)
     - Basic example of a mock function using `vi.fn()`
 - **Debugging**
-  - *Logging values:*
+  - Logging values:
     - [**`logValues`**](./tests/logValues.test.ts)
       - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
     - [**`logRoles`**](./tests/logRoles.test.tsx)
       - Example of how to log [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
       - Further reading:
         - [Accessibility | Testing Library (logRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#logroles)
-  - *Logging React components:*
+  - Logging React components:
     - [**`logReactUI`**](./tests/logReactUI.test.tsx)
       - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
       - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).

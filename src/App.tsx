@@ -1,6 +1,7 @@
 import MySimpleComponent from './components/MySimpleComponent';
 import MySimpleTable from './components/MySimpleTable';
 import ButtonCard from './components/ButtonCard';
+import MySimpleCheckbox from './components/MySimpleCheckbox';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -41,6 +42,10 @@ function App() {
           <hr />
           <section>
             <ButtonCard />
+          </section>
+          <hr />
+          <section>
+            <MySimpleCheckbox label="Check me!" />
           </section>
         </section>
       </main>

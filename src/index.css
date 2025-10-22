@@ -83,3 +83,19 @@ td {
   border-radius: 0.5rem;
   background: white;
 }
+
+label.checkbox-label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: royalBlue;
+}
