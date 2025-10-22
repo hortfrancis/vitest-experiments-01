@@ -1,6 +1,6 @@
 # Vitest Experiments 01
 
-This repository includes examples of how to use [**Vitest**](https://vitest.dev/), for unit testing in React projects, using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). 
+This repository includes examples of how to use [**Vitest**](https://vitest.dev/), for unit testing in React projects, using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 
 React Testing Library handles rendering and interacting with the [DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) (using [jsdom](https://github.com/jsdom/jsdom)), while Vitest provides the testing framework and assertion library.
 
@@ -27,10 +27,16 @@ This project uses TypeScript; therefore, all test files have the file extensions
   - [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
     - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
     - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
-  - User events 
+  - User events
     - [**`userEvents`**](./tests/userEvents.test.tsx)
-      - Example of simulating user interactions (clicking a checkbox and a button) using [`@testing-library/user-event`](https://github.com/testing-library/user-event)
+      - Examples of simulating user interactions using [`@testing-library/user-event`](https://github.com/testing-library/user-event)
       - Demonstrates how to verify changes in UI state after user interactions
+        - Clicking a checkbox
+        - Clicking a button
+        - Typing into a text input & clearing it
+          - Further reading:
+            - [Keyboard | Testing Library](https://testing-library.com/docs/user-event/keyboard)
+            - [Utility APIs | Testing Library (type)](https://testing-library.com/docs/user-event/utility#type)
       - `userEvent` is preferred over `fireEvent` for simulating real user behavior
         - Further reading:
           - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
