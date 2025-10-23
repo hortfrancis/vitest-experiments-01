@@ -34,9 +34,10 @@ This project uses TypeScript; therefore, all test files have the file extensions
         - Clicking a checkbox
         - Clicking a button
         - Typing into a text input & clearing it
-          - Further reading:
+          - Further reading:  
             - [Keyboard | Testing Library](https://testing-library.com/docs/user-event/keyboard)
             - [Utility APIs | Testing Library (type)](https://testing-library.com/docs/user-event/utility#type)
+        - 'Tabbing' through focusable elements (pressing the TAB key)
       - `userEvent` is preferred over `fireEvent` for simulating real user behavior
         - Further reading:
           - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
