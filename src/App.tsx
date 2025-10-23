@@ -5,6 +5,7 @@ import ButtonCard from './components/ButtonCard';
 import MySimpleCheckbox from './components/MySimpleCheckbox';
 import MySimpleButton from './components/MySimpleButton';
 import MySimpleInput from './components/MySimpleInput';
+import TabbableElements from './components/TabbableElements';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -60,6 +61,10 @@ function App() {
             <MySimpleInput
               label="Enter some text:"
             />
+          </section>
+          <hr />
+          <section>
+            <TabbableElements />
           </section>
         </section>
       </main>

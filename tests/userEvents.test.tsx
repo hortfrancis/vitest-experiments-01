@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import MySimpleCheckbox from '../src/components/MySimpleCheckbox';
 import MySimpleButton from '../src/components/MySimpleButton';
 import MySimpleInput from '../src/components/MySimpleInput';
+import TabbableElements from '../src/components/TabbableElements';
 
 describe('user events', () => {
   test("Checkbox is checked when clicked", async () => {
@@ -61,5 +62,41 @@ describe('user events', () => {
     // If we did not have focus, we could use `screen.getByLabelText('Type here...').focus();` first. 
     await user.keyboard('Vitest is great!');
     expect(inputElement.value).toBe('Vitest is great!');
+  });
+
+  test("User can tab through tabbable elements", async () => {
+    const user = userEvent.setup();
+    render(<TabbableElements />);
+    
+    // By default, the `<body>` has focus on page load. 
+    expect(document.body).toHaveFocus();
+
+    // Simulate tabbing through the elements
+    await user.tab();
+    expect(screen.getByText('Button 1')).toHaveFocus();
+
+    await user.tab();
+    expect(screen.getByText('Link 1')).toHaveFocus();
+
+    await user.tab();
+    expect(screen.getByPlaceholderText('Input 1')).toHaveFocus();
+
+    await user.tab();
+    expect(screen.getByText('Button 2')).toHaveFocus();
+
+    await user.tab();
+    expect(screen.getByText('Link 2')).toHaveFocus();
+
+    await user.tab();
+    expect(screen.getByPlaceholderText('Input 2')).toHaveFocus();
+
+    // We can also go back up the way we came by using SHIFT + TAB
+    await user.tab({ shift: true });
+    expect(screen.getByText('Link 2')).toHaveFocus();
+
+    await user.tab({ shift: true });
+    expect(screen.getByText('Button 2')).toHaveFocus();
+
+    // And so on...
   });
 });
