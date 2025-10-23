@@ -41,13 +41,13 @@ describe('user events', () => {
 
     const inputElement = screen.getByLabelText('Type here...') as HTMLInputElement;
 
-    // // Initially, the input should be empty
+    // Initially, the input should be empty
     expect(inputElement.value).toBe('');
 
-    // // Simulate user typing into the input
+    // Simulate user typing into the input
     await user.type(inputElement, 'Hello, World!');
 
-    // // Verify that the input value has been updated
+    // Verify that the input value has been updated
     expect(inputElement.value).toBe('Hello, World!');
 
     // Simulate user clearing the input
@@ -56,8 +56,9 @@ describe('user events', () => {
     // Verify that the input is empty again
     expect(inputElement.value).toBe('');
 
-    // We can also use `user.keyboard`
-    // -- `user.type` uses this 'under-the-hood'
+    // We can also use `user.keyboard` -- `user.type` uses this 'under-the-hood'. 
+    // This works because we still have focus on the input element! 
+    // If we did not have focus, we could use `screen.getByLabelText('Type here...').focus();` first. 
     await user.keyboard('Vitest is great!');
     expect(inputElement.value).toBe('Vitest is great!');
   });
