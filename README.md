@@ -20,47 +20,57 @@ This project uses TypeScript; therefore, all test files have the file extensions
   - Further reading:
     - [Sanity check - Wikipedia](https://en.wikipedia.org/wiki/Sanity_check)
     - [What is a sanity test check? - Stack Overflow](https://stackoverflow.com/questions/4055733/what-is-a-sanity-test-check)
-- **Testing utility functions**
-  - [**`capitalise`**](./tests/capitalise.test.ts)
-    - A simple utility function to capitalise the first letter of a string
-- **Testing React components**
-  - [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
-    - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
-    - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
-  - User events
-    - [**`userEvents`**](./tests/userEvents.test.tsx)
-      - Examples of simulating user interactions using [`@testing-library/user-event`](https://github.com/testing-library/user-event)
-      - Demonstrates how to verify changes in UI state after user interactions
-        - Clicking a checkbox
-        - Clicking a button
-        - Typing into a text input & clearing it
-          - Further reading:  
-            - [Keyboard | Testing Library](https://testing-library.com/docs/user-event/keyboard)
-            - [Utility APIs | Testing Library (type)](https://testing-library.com/docs/user-event/utility#type)
-        - 'Tabbing' through focusable elements (pressing the TAB key)
-      - `userEvent` is preferred over `fireEvent` for simulating real user behavior
-        - Further reading:
-          - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
-  - [**`testingForms`**](./tests/testingForms.test.tsx)
-    - Example of testing a simple form component with text input and select dropdown
-    - Shows how to find form elements in the DOM, simulate user input, and verify form submission behavior 
-- **Mocking**
-  - [**`mocking`**](./tests/mocking.test.ts)
-    - Basic example of a mock function using `vi.fn()`
-- **Debugging**
-  - Logging values:
-    - [**`logValues`**](./tests/logValues.test.ts)
-      - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
-    - [**`logRoles`**](./tests/logRoles.test.tsx)
-      - Example of how to log [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
-      - Further reading:
-        - [Accessibility | Testing Library (logRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#logroles)
-  - Logging React components:
-    - [**`logReactUI`**](./tests/logReactUI.test.tsx)
-      - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
-      - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).
-  - Further reading:
-    - [Debugging | Testing Library](https://testing-library.com/docs/dom-testing-library/api-debugging)
+
+### Testing utility functions 
+
+- [**`capitalise`**](./tests/capitalise.test.ts)
+  - A simple utility function to capitalise the first letter of a string
+
+### Testing React components
+
+- [**`renderReactUI`**](./tests/renderReactUI.test.tsx)
+  - A basic example of rendering a React component and verifying its output using [`@testing-library/react`](https://testing-library.com/docs/react-testing-library/intro/)
+  - Requires [`jsdom`](https://github.com/jsdom/jsdom) for its test environment (configured in [`vite.config.ts`](./vite.config.ts))
+- [**`testingForms`**](./tests/testingForms.test.tsx)
+  - Example of testing a simple form component with text input and select dropdown
+  - Shows how to find form elements in the DOM, simulate user input, and verify form submission behavior 
+
+### User events 
+
+- [**`userEvents`**](./tests/userEvents.test.tsx)
+  - Examples of simulating user interactions using [`@testing-library/user-event`](https://github.com/testing-library/user-event)
+  - Demonstrates how to verify changes in UI state after user interactions
+    - Clicking a checkbox
+    - Clicking a button
+    - Typing into a text input & clearing it
+      - Further reading:  
+        - [Keyboard | Testing Library](https://testing-library.com/docs/user-event/keyboard)
+        - [Utility APIs | Testing Library (type)](https://testing-library.com/docs/user-event/utility#type)
+    - 'Tabbing' through focusable elements (pressing the TAB key)
+  - `userEvent` is preferred over `fireEvent` for simulating real user behavior
+    - Further reading:
+      - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
+
+### Mocking 
+
+- [**`mocking`**](./tests/mocking.test.ts)
+  - Basic example of a mock function using `vi.fn()`
+
+### Debugging 
+
+- Logging values:
+  - [**`logValues`**](./tests/logValues.test.ts)
+    - Very simple example of logging values to the console during tests (not recommended for finished test cases, but useful for debugging).
+  - [**`logRoles`**](./tests/logRoles.test.tsx)
+    - Example of how to log [ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles) of rendered UI elements -- to help you write better queries for finding these elements in the DOM during tests.
+    - Further reading:
+      - [Accessibility | Testing Library (logRoles)](https://testing-library.com/docs/dom-testing-library/api-accessibility#logroles)
+- Logging React components:
+  - [**`logReactUI`**](./tests/logReactUI.test.tsx)
+    - Example of logging the rendered output of a React component to the console during tests (again, mostly useful for debugging).
+    - Includes examples of how to log specific found elements in the DOM (using rows in a `<table>`).
+- Further reading:
+  - [Debugging | Testing Library](https://testing-library.com/docs/dom-testing-library/api-debugging)
 
 ## Setup
 
