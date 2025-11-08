@@ -41,6 +41,9 @@ This project uses TypeScript; therefore, all test files have the file extensions
       - `userEvent` is preferred over `fireEvent` for simulating real user behavior
         - Further reading:
           - [User Event | Testing Library (Differences from fireEvent)](https://testing-library.com/docs/user-event/intro/#differences-from-fireevent)
+  - [**`testingForms`**](./tests/testingForms.test.tsx)
+    - Example of testing a simple form component with text input and select dropdown
+    - Shows how to find form elements in the DOM, simulate user input, and verify form submission behavior 
 - **Mocking**
   - [**`mocking`**](./tests/mocking.test.ts)
     - Basic example of a mock function using `vi.fn()`

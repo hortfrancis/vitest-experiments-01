@@ -6,6 +6,7 @@ import MySimpleCheckbox from './components/MySimpleCheckbox';
 import MySimpleButton from './components/MySimpleButton';
 import MySimpleInput from './components/MySimpleInput';
 import TabbableElements from './components/TabbableElements';
+import MySimpleForm from './components/MySimpleForm';
 
 const tableData = [
   { id: 1, name: 'Alice', cheese: 'Gouda' },
@@ -65,6 +66,10 @@ function App() {
           <hr />
           <section>
             <TabbableElements />
+          </section>
+
+          <section>
+            <MySimpleForm />
           </section>
         </section>
       </main>

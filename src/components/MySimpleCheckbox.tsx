@@ -1,4 +1,4 @@
-const MySimpleCheckbox = ({ label }) => {
+const MySimpleCheckbox = ({ label }: { label: string }) => {
   return (
     <div>
       <label className='checkbox-label'>
